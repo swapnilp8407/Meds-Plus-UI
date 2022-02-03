@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home SnapShot 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "#0000FF",
+        "fontFamily": "Font2",
+        "fontSize": 30,
+      }
+    }
+  >
+    Home Screen 
+  </Text>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+  >
+    <Text>
+      go to help
+    </Text>
+  </View>
+</View>
+`;
