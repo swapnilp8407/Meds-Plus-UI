@@ -1,4 +1,4 @@
-describe('Example', () => {
+describe('Swapnil', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
@@ -7,17 +7,15 @@ describe('Example', () => {
     await device.reloadReactNative();
   });
 
-  it('should have welcome screen', async () => {
-    await expect(element(by.id('welcome'))).toBeVisible();
-  });
-
-  it('should show hello screen after tap', async () => {
-    await element(by.id('hello_button')).tap();
-    await expect(element(by.text('Hello!!!'))).toBeVisible();
-  });
-
-  it('should show world screen after tap', async () => {
-    await element(by.id('world_button')).tap();
-    await expect(element(by.text('World!!!'))).toBeVisible();
+  it('should have Login screen to Home screen', async () => {
+    await expect(element(by.id('login_screen'))).toBeVisible();
+    await element(by.id('email')).typeText('test@example.com');
+    await element(by.id('password')).typeText('123456');
+    await element(by.id('submit')).tap();
+    await expect(element(by.id('home_screen'))).toBeVisible();
+    await element(by.id('nav_button')).tap();
+    await expect(element(by.id('help_screen'))).toBeVisible();
+    await element(by.id('nav_to_home')).tap();
+    await expect(element(by.id('home_screen'))).toBeVisible();
   });
 });

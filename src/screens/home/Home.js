@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, Pressable, StatusBar } from 'react-native';
+import { View, Text, Pressable, StatusBar, TextInput, Button } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import Icon from '../../components/Icon';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,12 +17,11 @@ const Home = ({ navigation }) => {
   const userData = useSelector(getUserData);
   // console.log(userData);
   return (
-    <View>
+    <View testID="home_screen">
       <StatusBar barStyle="dark-content" />
       <Text style={{ fontFamily: t('Font2'), fontSize: 30, color: '#0000FF' }}>Home Screen </Text>
-      <Pressable onPress={() => navigation.navigate('Help')}>
+      <Pressable testID="nav_button" onPress={() => navigation.navigate('Help')}>
         <Text>go to help</Text>
-        <Icon pack="FontAwesome5" name={'home'} size={30} style={{ color: '#0000FF' }} />
       </Pressable>
     </View>
   );
