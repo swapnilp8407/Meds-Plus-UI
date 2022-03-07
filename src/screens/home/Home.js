@@ -21,6 +21,7 @@ const Home = ({ navigation }) => {
       <StatusBar barStyle="dark-content" />
       <Text style={{ fontFamily: t('Font2'), fontSize: 30, color: '#0000FF' }}>Home Screen </Text>
       <Pressable testID="nav_button" onPress={() => navigation.navigate('Help')}>
+        <Text>hello Swapnil</Text>
         <Text>go to help</Text>
       </Pressable>
     </View>
